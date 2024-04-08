@@ -8,6 +8,9 @@ An easy python script to make smooth colorsets for [Rhythia](https://github.com/
 
 ## Installing
 
+### Required software:
+- Python (and pip)
+
 ```sh
 $ git clone https://github.com/mycpphurts/RhythiaSmoothColorMaker.git
 $ cd RhythiaSmoothColorMaker
