@@ -1,5 +1,6 @@
 import numpy as np
 from matplotlib.colors import rgb2hex, hex2color
+import os
 
 def hex_to_rgb(hex_color):
     return np.array(hex2color(hex_color))
@@ -19,28 +20,31 @@ def smooth_color_transition(color1, color2, num_steps=100): # Change num_steps n
     return transition_colors
 
 def save_transition_to_txt(transition_colors, filename):
-    with open(filename, 'w') as file:
+    output_folder = 'Output'
+    os.makedirs(output_folder, exist_ok=True)  # Make an output folder
+    
+    output_path = os.path.join(output_folder, filename) 
+    
+    with open(output_path, 'w') as file:
         for color in transition_colors:
-            hex_color = rgb_to_hex(color)  # Convert RGB to hex
+            hex_color = rgb_to_hex(color) 
             file.write(hex_color + '\n')
 
-    # Reverse the transition colors
+    # Reverse!!!!!!!!
     reversed_colors = transition_colors[::-1]
     
-    # Reverse file, write to temp file
-    temp_filename = filename + '.temp'
+    temp_filename = output_path + '.temp'
     with open(temp_filename, 'w') as temp_file:
         for color in reversed_colors:
-            hex_color = rgb_to_hex(color)  # Convert RGB to hex
+            hex_color = rgb_to_hex(color)
             temp_file.write(hex_color + '\n')
     
-    # Store temp to main
+    # temp file > main file
     with open(temp_filename, 'r') as temp_file:
-        with open(filename, 'a') as file:
+        with open(output_path, 'a') as file:
             file.write(temp_file.read())
     
-    # DELETE THE TEMP FILE
-    import os
+    # Banish temp to the shadow realm
     os.remove(temp_filename)
 
 color1 = input("Enter the first hex color: ")
