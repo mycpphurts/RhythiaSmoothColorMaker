@@ -4,7 +4,7 @@ An easy python script to make smooth colorsets for [Rhythia](https://github.com/
 ## Index
 - [Installing](#installing)
 - [Usage](#usage)
-- [Updating]
+- [Updating](#updating)
 - [Modifying smoothness](#modifying-smoothness)
 
 ## Installing
