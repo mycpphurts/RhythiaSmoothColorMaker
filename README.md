@@ -11,7 +11,7 @@ An easy python script to make smooth colorsets for [Rhythia](https://github.com/
 
 ### Required software:
 - Python (and pip)
-- (git for Windows)[https://gitforwindows.org/] (Windows users)  [OPTIONAL]
+- [git for Windows](https://gitforwindows.org/) (Windows users)  [OPTIONAL]
   - You can install by pressing Code > Download ZIP
   - For my linux homies, the `git` package
 
