@@ -37,6 +37,3 @@ $ git pull
 ```
 
 Otherwise, download a new ZIP of the source code by pressing Code > Download ZIP
-
-## Modifying smoothness
-Want more lines? Read the source code! On line 14 change the number in `num_steps` to the number of lines you want (be sure to read the comment!)
