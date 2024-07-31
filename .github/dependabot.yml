@@ -1,11 +1,7 @@
 version: 2
 updates:
 - package-ecosystem: pip
-  directory: "/requirements.txt"
+  directory: "/"
   schedule:
     interval: daily
     time: "08:00"
-  groups:
-    python-packages:
-      patterns:
-        - "*"
