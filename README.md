@@ -4,6 +4,7 @@ An easy python script to make smooth colorsets for [Rhythia](https://github.com/
 ## Index
 - [Installing](#installing)
 - [Usage](#usage)
+  - [Terminology](#terminology)
 - [Updating](#updating)
 - [Modifying smoothness](#modifying-smoothness)
 
@@ -27,6 +28,10 @@ Inside the repository folder:
 ```sh
 $ python Smooth.py
 ```
+
+### Terminology
+While inside the script there's some user friendly explanations on what to do, here's some basic terminology:
+- Steps: Number of lines of colors for the transition. Originally putting 50 gave you 100 (smooth in and smooth out), the math for the steps*2 changed to compensate missing colors
 
 ## Updating
 If you are using git for Windows **OR** the `git` package on Linux
