@@ -1,0 +1,78 @@
+name: Bug report
+description: Create a report to help improve the project
+title: "[Bug] "
+labels: ["bug"]
+assignees: ["mycpphurts"]
+body:
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "By opening this bug I confirm that I:"
+      options:
+        - label: "Have read the README.md"
+          required: true
+        - label: "Have installed Python and the packages in `requirements.txt`"
+          required: true
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: The issue
+      placeholder: When I do this, this happens
+    validations:
+      required: true
+
+   - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "How to reproduce"
+      description: |
+        Steps to reproduce the behavior. Please detail the steps:
+        1. Do this
+        2. Do that
+        3. Apply magic
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected behavior"
+      description: |
+        Describe what you expected to happen when the bug occurred.
+    validations:
+      required: true
+
+  - type: textarea
+    id: multimedia_proof
+    attributes:
+      label: "Multimedia proof [Optional]"
+      description: "If possible, include videos or screenshots showing the bug in action."
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs (if available)"
+      description: "Include a log here!"
+      render: log
+
+  - type: textarea
+    id: system_info
+    attributes:
+      label: "About your system"
+      description: |
+        Provide details about your system:
+        - OS: [e.g., Windows 11, Linux...]
+        - Python version:
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "Additional notes"
+      description: "Extra notes you'd like to add that you believe would help fix the issue."
+
