@@ -98,14 +98,14 @@ def smooth_color_generator(stdscr):
     stdscr.refresh()
     curses.echo()
     curses.curs_set(1)
-    colors_input = stdscr.getstr(2, 1, 100).decode('utf-8')
+    colors_input = stdscr.getstr(2, 1, 600).decode('utf-8')
     colors = [color.strip() for color in colors_input.split(',')]
-    stdscr.addstr(3, 1, "Enter the number of steps: ")
+    stdscr.addstr(3, 1, "Enter the number of steps (lines of colors): ")
     stdscr.refresh()
     num_steps = int(stdscr.getstr(4, 1, 5).decode('utf-8'))
     stdscr.addstr(5, 1, "Enter the output file name (with .txt extension): ")
     stdscr.refresh()
-    output_file = stdscr.getstr(6, 1, 20).decode('utf-8')
+    output_file = stdscr.getstr(6, 1, 200).decode('utf-8')
     curses.noecho()
     curses.curs_set(0)
 
@@ -118,14 +118,14 @@ def smooth_color_generator(stdscr):
 
 def smooth_chroma_generator(stdscr):
     stdscr.clear()
-    stdscr.addstr(1, 1, "Enter the number of steps: ")
+    stdscr.addstr(1, 1, "Enter the number of steps (lines of colors): ")
     stdscr.refresh()
     curses.echo()
     curses.curs_set(1)
     num_steps = int(stdscr.getstr(2, 1, 5).decode('utf-8'))
     stdscr.addstr(3, 1, "Enter the output file name (with .txt extension): ")
     stdscr.refresh()
-    output_file = stdscr.getstr(4, 1, 20).decode('utf-8')
+    output_file = stdscr.getstr(4, 1, 200).decode('utf-8')
     curses.noecho()
     curses.curs_set(0)
 
